@@ -1,0 +1,148 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.wrapper{
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    cursor: pointer;
+}
+
+.wrapper:hover .cls-1{
+    animation: Ring1AnimationIn 0.35s forwards;
+}
+
+.wrapper:hover .cls-2{
+    animation: Ring2AnimationIn 0.35s forwards;
+}
+
+.wrapper:hover .cls-3{
+    animation: Ring3AnimationIn 0.35s forwards;
+}
+
+.cls-1{
+    position: absolute;
+    transform: translate(0px, 0px);
+    animation: Ring1AnimationOut 0.35s forwards;
+    fill: red;
+   
+}
+
+.cls-2{
+    position: absolute;
+    transform: translate(0px, 0px);
+    animation: Ring2AnimationOut 0.35s forwards;
+    
+}
+
+.cls-3{
+    position: absolute;
+    transform: translate( 0px, 0px );
+    animation: Ring3AnimationOut 0.35s forwards;
+    
+}
+
+@keyframes Ring1AnimationIn{
+    0%{
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in;
+    }
+    40%{
+        transform: translateY(-300px);
+        animation-timing-function: linear;
+        fill: white;
+    }
+    100%{
+        transform: translateY(-402px);
+        animation-timing-function: ease-out;
+        fill: white;
+    }
+}
+
+@keyframes Ring1AnimationOut {
+    0%{
+        transform: translateY(-400px);
+        -webkit-animation-timing-function: ease-out;
+    }
+    70%{
+        transform: translateY(-300px);
+        -webkit-animation-timing-function: linear;
+    }
+    100%{
+        transform: translate(0px,0px);
+        -webkit-animation-timing-function: ease-in;
+    }
+}
+
+@keyframes Ring2AnimationIn {
+    0% {
+      transform: translate(0px, 0px);
+      animation-timing-function: ease-in;
+    }
+    70% {
+      transform: translate(90px,-90px);
+      animation-timing-function: linear;
+      fill: red;
+    }
+    100% {
+      transform: translate(-324px, 302px);
+      animation-timing-function: ease-out;
+      fill: red;
+    }
+  }
+
+  @keyframes Ring2AnimationOut {
+      0%{
+          transform: translate(-324px, 305px);
+          -webkit-animation-timing-function: ease-out;
+          fill: white;
+      }
+      70%{
+          transform: translate(90px, -90px);
+          -webkit-animation-timing-function: linear;
+          fill: red;
+      }
+      100%{
+          transform: translate(0px,0px);
+          -webkit-animation-timing-function: ease-in;
+      }
+  }
+
+  @keyframes Ring3AnimationIn {
+    0% {
+      transform: translate(0px, 0px);
+      animation-timing-function: ease-in;
+    }
+    70% {
+      transform: translate(-90px, -90px);
+      animation-timing-function: linear;
+      fill: red;
+    }
+    100% {
+      transform: translate(344px, 304px);
+      animation-timing-function: ease-out;
+      fill: red;
+    }
+  }
+
+  @keyframes Ring3AnimationOut {
+      0%{
+          transform: translate(345px, 305px);
+          -webkit-animation-timing-function: ease-out;
+          fill: white;
+      }
+      70%{
+          transform: translate(-90px,-90px);
+          -webkit-animation-timing-function: linear;
+          fill: red;
+      }
+      100%{
+          transform: translate(0px,0px);
+          -webkit-animation-timing-function: ease-in;
+      }
+  }
+
